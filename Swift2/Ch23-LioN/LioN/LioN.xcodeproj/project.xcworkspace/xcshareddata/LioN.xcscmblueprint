@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "31132615AEC620A285917D9876D908F95A0F9163+++7F723AF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "31132615AEC620A285917D9876D908F95A0F9163+++7F723AF" : 0,
+    "353BD29D762B1C39987DAEC56FF7F8A9BFAEE759+++C01510D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "018CBC90-0E95-4D44-8652-C0F606B679C0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "31132615AEC620A285917D9876D908F95A0F9163+++7F723AF" : "AnyoneCanCreateAnApp\/",
+    "353BD29D762B1C39987DAEC56FF7F8A9BFAEE759+++C01510D" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LioN",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Ch23-LioN\/LioN\/LioN.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wlwise\/AnyoneCanCreateAnApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "31132615AEC620A285917D9876D908F95A0F9163+++7F723AF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wlwise\/AnyoneCanCreateAnApp",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "353BD29D762B1C39987DAEC56FF7F8A9BFAEE759+++C01510D"
+    }
+  ]
+}

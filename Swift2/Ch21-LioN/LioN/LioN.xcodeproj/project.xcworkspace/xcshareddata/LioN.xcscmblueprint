@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "31132615AEC620A285917D9876D908F95A0F9163+++4D69CC0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "353BD29D762B1C39987DAEC56FF7F8A9BFAEE759+++F471660" : 0,
+    "31132615AEC620A285917D9876D908F95A0F9163+++4D69CC0" : 0,
+    "353BD29D762B1C39987DAEC56FF7F8A9BFAEE759+++04EA278" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "018CBC90-0E95-4D44-8652-C0F606B679C0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "353BD29D762B1C39987DAEC56FF7F8A9BFAEE759+++F471660" : "",
+    "31132615AEC620A285917D9876D908F95A0F9163+++4D69CC0" : "AnyoneCanCreateAnApp\/",
+    "353BD29D762B1C39987DAEC56FF7F8A9BFAEE759+++04EA278" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LioN",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Ch21-LioN\/LioN\/LioN.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wlwise\/AnyoneCanCreateAnApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "31132615AEC620A285917D9876D908F95A0F9163+++4D69CC0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wlwise\/AnyoneCanCreateAnApp",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "353BD29D762B1C39987DAEC56FF7F8A9BFAEE759+++04EA278"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wlwise\/AnyoneCanCreateAnApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "353BD29D762B1C39987DAEC56FF7F8A9BFAEE759+++F471660"
+    }
+  ]
+}
