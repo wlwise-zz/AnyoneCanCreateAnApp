@@ -11,12 +11,12 @@ import UIKit
 class MainViewController: UITableViewController, AddEditViewControllerDelegate  {
     var lionData : [Lion] = []
     var editIndexPath: NSIndexPath?
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         lionData = [Lion]()
         loadLions()
-
+        
     }
     func loadLions(){
         let path = getDataFilePath()
@@ -37,7 +37,7 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate  
     
     func addItemViewControllerDidCancel(controller: AddEditViewController) {
         dismiss(animated: true, completion: nil)
-
+        
     }
     
     func addItemViewController(controller: AddEditViewController, didFinishAddingItem lionItem: Lion) {
@@ -64,7 +64,7 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate  
         saveLionItems()
         dismiss(animated: true, completion: nil)
     }
-
+    
     
     func addItem(lionItem :  Lion) {
         let currentIndex = lionData.count
@@ -73,7 +73,7 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate  
         let indexPaths = [indexPath]
         tableView.insertRows(at: indexPaths, with: .automatic)
     }
-
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "add" {
@@ -90,7 +90,7 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate  
             }
         }
     }
-
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lionData.count
@@ -105,11 +105,11 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate  
         let indexPaths = [indexPath]
         tableView.deleteRows(at: indexPaths, with: .automatic)
     }
-
-
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "lionCell", for: indexPath);
-
+        
         cell.textLabel?.text = lionData[indexPath.row].lionName
         cell.detailTextLabel?.text = lionData[indexPath.row].lionDescription
         if lionData[indexPath.row].like == 1{
@@ -117,28 +117,28 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate  
         }else{
             cell.imageView?.image =  UIImage(named: "orNotCell")
         }
-
+        
         return cell
-
+        
     }
     
     func getDataFilePath() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0].appendingPathComponent("Lion.plist")
     }
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(getDataFilePath())
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
