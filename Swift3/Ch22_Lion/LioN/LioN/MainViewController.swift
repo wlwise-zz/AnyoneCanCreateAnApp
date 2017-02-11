@@ -30,7 +30,7 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate {
             let navigationController = segue.destination as! UINavigationController
             let controller = navigationController.topViewController as! AddEditViewController
             controller.delegate = self
-        }else if segue.identifier == "edit" {
+        } else if segue.identifier == "edit" {
             let navigationController = segue.destination as! UINavigationController
             let controller = navigationController.topViewController as! AddEditViewController
             controller.delegate = self

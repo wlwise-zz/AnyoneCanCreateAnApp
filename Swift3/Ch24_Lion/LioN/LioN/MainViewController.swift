@@ -27,7 +27,7 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate {
     }
     
     func addItemViewController(controller: AddEditViewController, didFinishEditingItem lionItem: Lion) {
-        if let cell = tableView.cellForRow(at: editIndexPath!){
+        if let cell = tableView.cellForRow(at: editIndexPath!) {
             cell.textLabel?.text = lionItem.lionName
             cell.detailTextLabel?.text = lionItem.lionDescription
             
@@ -51,11 +51,11 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate {
             let navigationController = segue.destination as! UINavigationController
             let controller = navigationController.topViewController as! AddEditViewController
             controller.delegate = self
-        }else if segue.identifier == "edit" {
+        } else if segue.identifier == "edit" {
             let navigationController = segue.destination as! UINavigationController
             let controller = navigationController.topViewController as! AddEditViewController
             controller.delegate = self
-            if let indexPath = tableView.indexPath(for: sender as! UITableViewCell){
+            if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
                 controller.lionToEdit = lionData[indexPath.row]
                 editIndexPath = indexPath
             }
@@ -63,7 +63,7 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate {
     }
     
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "lionCell", for: indexPath);
         cell.textLabel?.text = lionData[indexPath.row].lionName
         cell.detailTextLabel?.text = lionData[indexPath.row].lionDescription
@@ -88,16 +88,16 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate {
         tableView.deleteRows(at: indexPaths, with: .automatic)
     }
     
-    func loadLions(){
+    func loadLions() {
         let path = getDataFilePath()
-        if let data =  try? Data(contentsOf: path){
+        if let data =  try? Data(contentsOf: path) {
             let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
             lionData = unarchiver.decodeObject(forKey: "lionData") as! [Lion]
             unarchiver.finishDecoding()
         }
     }
     
-    func saveLionItems(){
+    func saveLionItems() {
         let data = NSMutableData()
         let archiver = NSKeyedArchiver(forWritingWith: data)
         archiver.encode(lionData, forKey: "lionData")

@@ -25,10 +25,10 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate, 
 
     func filterLioNsforSearchText(searchedText: String) {
         self.searchLionData = self.lionData.filter({(lion: Lion) -> Bool in
-            if (resultSearchController.searchBar.selectedScopeButtonIndex == 0){
+            if resultSearchController.searchBar.selectedScopeButtonIndex == 0 {
                 let stringMatch = lion.lionName.uppercased().range(of: searchedText.uppercased())
                 return stringMatch != nil
-            }else{
+            } else {
                 let stringMatch = lion.lionDescription.uppercased().range(of: searchedText.uppercased())
                 return stringMatch != nil
             }
@@ -39,7 +39,7 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate, 
     }
 
 
-    func resetSearchBar(){
+    func resetSearchBar() {
         resultSearchController.isActive = false
         resultSearchController.searchBar.text = ""
     }
@@ -52,9 +52,9 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate, 
         loadLions()
         
     }
-    func loadLions(){
+    func loadLions() {
         let path = getDataFilePath()
-        if let data =  try? Data(contentsOf: path){
+        if let data =  try? Data(contentsOf: path) {
             let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
             lionData = unarchiver.decodeObject(forKey: "lionData") as! [Lion]
             unarchiver.finishDecoding()
@@ -81,17 +81,17 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate, 
     }
     
     func addItemViewController(controller: AddEditViewController, didFinishEditingItem lionItem: Lion) {
-        if let cell = tableView.cellForRow(at: editIndexPath! as IndexPath){
+        if let cell = tableView.cellForRow(at: editIndexPath! as IndexPath) {
             cell.textLabel?.text = lionItem.lionName
             cell.detailTextLabel?.text = lionItem.lionDescription
             
             lionData[editIndexPath!.row].lionDescription = lionItem.lionDescription
             lionData[editIndexPath!.row].lionName = lionItem.lionName
             lionData[editIndexPath!.row].like = lionItem.like
-            if (lionData[editIndexPath!.row].like == 1){
+            if (lionData[editIndexPath!.row].like == true){
                 cell.imageView!.image = UIImage(named: "likeItCell")
                 
-            }else {
+            } else {
                 cell.imageView!.image = UIImage(named: "orNotCell")
             }
         }
@@ -114,14 +114,14 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate, 
             let navigationController = segue.destination as! UINavigationController
             let controller = navigationController.topViewController as! AddEditViewController
             controller.delegate = self
-        } else if segue.identifier == "edit"{
+        } else if segue.identifier == "edit" {
                 let navigationController = segue.destination as! UINavigationController
                 let controller = navigationController.topViewController as! AddEditViewController
-                if let indexPath = tableView.indexPath(for: sender as! UITableViewCell){
+                if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
                     if (resultSearchController.isActive){
                         controller.lionToEdit = searchLionData[indexPath.row]
                         editIndexPath = indexPath as NSIndexPath?
-                    }else{
+                    } else {
                         controller.lionToEdit = lionData[indexPath.row]
                         editIndexPath = indexPath as NSIndexPath?
                     }
@@ -131,10 +131,10 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate, 
         }
     
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (self.resultSearchController.isActive){
             return searchLionData.count
-        }else{
+        } else {
             return lionData.count
         }
     }
@@ -153,18 +153,18 @@ class MainViewController: UITableViewController, AddEditViewControllerDelegate, 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var lion : Lion
-        if (self.resultSearchController.isActive){
+        if (self.resultSearchController.isActive) {
             lion = searchLionData[indexPath.row]
-        }else{
+        } else {
             lion = lionData[indexPath.row]
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "lionCell", for: indexPath);
         
         cell.textLabel?.text = lion.lionName
         cell.detailTextLabel?.text = lion.lionDescription
-        if lion.like == 1{
+        if lion.like == true {
             cell.imageView?.image =   UIImage(named: "likeItCell")
-        }else{
+        } else {
             cell.imageView?.image =  UIImage(named: "orNotCell")
         }
         return cell

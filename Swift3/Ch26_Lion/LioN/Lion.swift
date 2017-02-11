@@ -11,13 +11,13 @@ import Foundation
 class Lion : NSObject, NSCoding {
     var lionName = ""
     var lionDescription = ""
-    var like = 1
+    var like : Bool = true
     
-    required init(coder aDecoder : NSCoder){
+    required init(coder aDecoder : NSCoder) {
         super.init()
         lionName = aDecoder.decodeObject(forKey: "lionName") as! String
         lionDescription = aDecoder.decodeObject(forKey: "lionDescription") as! String
-        like = aDecoder.decodeInteger(forKey: "like")
+        like = aDecoder.decodeBool(forKey: "like")
     }
     
     func encode(with aCoder: NSCoder) {
@@ -26,7 +26,7 @@ class Lion : NSObject, NSCoding {
         aCoder.encode(like, forKey: "like")
     }
     
-    override init(){
+    override init() {
         super.init()
     }
 }

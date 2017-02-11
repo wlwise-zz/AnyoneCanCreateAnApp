@@ -17,7 +17,7 @@ protocol AddEditViewControllerDelegate : class {
 class AddEditViewController : UITableViewController, UITextFieldDelegate {
     weak var delegate: AddEditViewControllerDelegate?
     var newLion : Lion?
-    var likeVar : Int = 1 //like is 1 and dislike is 0
+    var likeVar : Bool = true
     var lionToEdit : Lion?
 
     @IBOutlet weak var doneButton: UIBarButtonItem!
@@ -26,32 +26,32 @@ class AddEditViewController : UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var dislikeButton: UIButton!
     @IBAction func likeClicked(_ sender: AnyObject) {
-        likeVar = 1
+        likeVar = true
         toggleLike()
     }
     
     @IBAction func dislikeClicked(_ sender: AnyObject) {
-        likeVar = 0
+        likeVar = false
         toggleLike()
     }
     
-    func toggleLike(){
-        if likeVar == 1 {
+    func toggleLike() {
+        if likeVar == true {
             dislikeButton.backgroundColor = UIColor.clear
             likeButton.backgroundColor = UIColor.green
-        }else {
+        } else {
             dislikeButton.backgroundColor = UIColor.red
             likeButton.backgroundColor = UIColor.clear
         }
     }
     
-    @IBAction func doneClicked(){
+    @IBAction func doneClicked() {
         if let item = lionToEdit{
             item.like = likeVar
             item.lionDescription = descTxt.text!
             item.lionName = nameTxt.text!
             delegate?.addItemViewController(controller: self, didFinishEditingItem: item)
-        }else {
+        } else {
             newLion = Lion()
             newLion?.lionName = nameTxt.text!
             newLion?.lionDescription = descTxt.text!
@@ -60,7 +60,7 @@ class AddEditViewController : UITableViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func cancelClicked(){
+    @IBAction func cancelClicked() {
         delegate?.addItemViewControllerDidCancel(controller: self)
     }
     
@@ -77,10 +77,10 @@ class AddEditViewController : UITableViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if (textField == nameTxt){
+        if textField == nameTxt {
             nameTxt.resignFirstResponder()
             descTxt.becomeFirstResponder()
-        }else {
+        } else {
             descTxt.resignFirstResponder()
         }
         return true
@@ -101,12 +101,12 @@ class AddEditViewController : UITableViewController, UITextFieldDelegate {
         }
         toggleLike()
         nameTxt.becomeFirstResponder()
-        let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        let tap  = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
         
     }
     
-    func dismissKeyboard(){
+    func dismissKeyboard() {
         view.endEditing(true)
     }
     

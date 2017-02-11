@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E338AC5A1E4FB7B800B64CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E338AC591E4FB7B800B64CCB /* Assets.xcassets */; };
 		E396BBE11DA011900031C1BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E396BBE01DA011900031C1BC /* AppDelegate.swift */; };
 		E396BBE31DA011900031C1BC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E396BBE21DA011900031C1BC /* MainViewController.swift */; };
 		E396BBE61DA011900031C1BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E396BBE41DA011900031C1BC /* Main.storyboard */; };
-		E396BBE81DA011900031C1BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E396BBE71DA011900031C1BC /* Assets.xcassets */; };
 		E396BBEB1DA011900031C1BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E396BBE91DA011900031C1BC /* LaunchScreen.storyboard */; };
 		E3B604D51DA0141B005F00BD /* Lion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B604D41DA0141B005F00BD /* Lion.swift */; };
 		E3B604D71DA01507005F00BD /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B604D61DA01507005F00BD /* AddEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E338AC591E4FB7B800B64CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E396BBDD1DA011900031C1BC /* LioN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LioN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E396BBE01DA011900031C1BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E396BBE21DA011900031C1BC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E396BBE51DA011900031C1BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E396BBE71DA011900031C1BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E396BBEA1DA011900031C1BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E396BBEC1DA011900031C1BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3B604D41DA0141B005F00BD /* Lion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lion.swift; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 				E3B604D41DA0141B005F00BD /* Lion.swift */,
 				E396BBE41DA011900031C1BC /* Main.storyboard */,
 				E3B604D61DA01507005F00BD /* AddEditViewController.swift */,
-				E396BBE71DA011900031C1BC /* Assets.xcassets */,
+				E338AC591E4FB7B800B64CCB /* Assets.xcassets */,
 				E396BBE91DA011900031C1BC /* LaunchScreen.storyboard */,
 				E396BBEC1DA011900031C1BC /* Info.plist */,
 			);
@@ -97,7 +97,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = WisaAbility;
 				TargetAttributes = {
 					E396BBDC1DA011900031C1BC = {
@@ -131,7 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E396BBEB1DA011900031C1BC /* LaunchScreen.storyboard in Resources */,
-				E396BBE81DA011900031C1BC /* Assets.xcassets in Resources */,
+				E338AC5A1E4FB7B800B64CCB /* Assets.xcassets in Resources */,
 				E396BBE61DA011900031C1BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +176,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -190,6 +191,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -226,6 +228,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -240,6 +243,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

@@ -15,7 +15,7 @@ class AddEditViewController : UITableViewController, UITextFieldDelegate {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func cancelClicked(){
+    @IBAction func cancelClicked() {
         dismiss(animated: true, completion: nil)
     }
     
@@ -25,10 +25,10 @@ class AddEditViewController : UITableViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if (textField == nameTxt){
+        if (textField == nameTxt) {
             nameTxt.resignFirstResponder()
             descTxt.becomeFirstResponder()
-        }else {
+        } else {
             descTxt.resignFirstResponder()
         }
         return true
@@ -37,11 +37,11 @@ class AddEditViewController : UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTxt.becomeFirstResponder()
-        let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
     
-    func dismissKeyboard(){
+    func dismissKeyboard() {
         view.endEditing(true)
     }
     

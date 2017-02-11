@@ -17,7 +17,7 @@ class MainViewController: UITableViewController {
     }
     
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "lionCell", for: indexPath);
         cell.textLabel?.text = "my first lion"
         return cell

@@ -16,20 +16,20 @@ protocol AddEditViewControllerDelegate : class {
 class AddEditViewController : UITableViewController, UITextFieldDelegate {
     weak var delegate: AddEditViewControllerDelegate?
     var newLion : Lion?
-    var likeVar : Int = 1
+    var likeVar : Bool = true
 
     @IBOutlet weak var doneButton: UIBarButtonItem!
     @IBOutlet weak var nameTxt: UITextField!
     @IBOutlet weak var descTxt: UITextField!
     @IBAction func likeClicked(_ sender: AnyObject) {
-        likeVar = 1
+        likeVar = true
     }
     
     @IBAction func dislikeClicked(_ sender: AnyObject) {
-        likeVar = 0
+        likeVar = false
     }
     
-    @IBAction func doneClicked(){
+    @IBAction func doneClicked() {
         newLion = Lion()
         newLion?.lionName = nameTxt.text!
         newLion?.lionDescription = descTxt.text!
@@ -37,7 +37,7 @@ class AddEditViewController : UITableViewController, UITextFieldDelegate {
         delegate?.addItemViewController(controller: self, didFinishAddingItem: newLion!)
     }
     
-    @IBAction func cancelClicked(){
+    @IBAction func cancelClicked() {
         delegate?.addItemViewControllerDidCancel(controller: self)
     }
     
@@ -54,10 +54,10 @@ class AddEditViewController : UITableViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if (textField == nameTxt){
+        if textField == nameTxt {
             nameTxt.resignFirstResponder()
             descTxt.becomeFirstResponder()
-        }else {
+        } else {
             descTxt.resignFirstResponder()
         }
         return true
@@ -67,12 +67,12 @@ class AddEditViewController : UITableViewController, UITextFieldDelegate {
         super.viewDidLoad()
         doneButton.isEnabled = false
         nameTxt.becomeFirstResponder()
-        let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        let tap  = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
         
     }
     
-    func dismissKeyboard(){
+    func dismissKeyboard() {
         view.endEditing(true)
     }
     

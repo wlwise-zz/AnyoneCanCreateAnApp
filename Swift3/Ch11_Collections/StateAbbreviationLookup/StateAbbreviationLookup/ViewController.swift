@@ -18,12 +18,12 @@ class ViewController: UIViewController {
 
     @IBAction func lookupClick(_ sender: AnyObject) {
         let dictionaryKey = stateTextField.text
-        if dictionaryKey == ""{
+        if dictionaryKey == "" {
             resultLabel.text = "Please enter a state name"
-        }else{
-            if let stateAbb = stateDict[dictionaryKey!]{
+        } else {
+            if let stateAbb = stateDict[dictionaryKey!] {
                 resultLabel.text = stateAbb
-            }else{
+            } else {
                 resultLabel.text = "No state abbreviation found"
             }
         }

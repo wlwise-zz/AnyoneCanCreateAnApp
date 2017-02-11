@@ -20,12 +20,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func buttonClick(_ sender: AnyObject) {
+    @IBAction func buttonClick(_ sender: UIButton) {
         myLabel.text = "I did it!"
     }
     
     @IBOutlet weak var myLabel: UILabel!
-    
-    @IBOutlet weak var wrongConnection: UIButton!
+
 }
 

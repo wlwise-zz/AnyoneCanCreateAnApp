@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBAction func changeLabelClicked(_ sender: AnyObject) {
+    @IBAction func changeLabelButtonClicked(_ sender: UIButton) {
         myLabel.text = myTxtField.text
     }
     @IBOutlet weak var myLabel: UILabel!

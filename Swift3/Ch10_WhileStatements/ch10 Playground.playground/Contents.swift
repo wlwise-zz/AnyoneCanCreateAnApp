@@ -9,17 +9,17 @@ var y = 10
 
 //while (x < y){
 //    print("\(x) is less than \(y)")
-//    x = x+1
+//    x = x + 1
 //}
 
-while (x < y){
+while x < y {
     print("\(x) is less than \(y)")
     y = y - 1
 }
 
 var a = 11
 
-switch a{
+switch a {
 case 1,3,5,7,11,13:
     print ("value must be a prime")
 case 2, 4, 6, 8, 9, 12:

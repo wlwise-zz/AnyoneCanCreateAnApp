@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         let pepperoni : ingredient = ("Pepperoni", "yummy goodness", "probably none", "less than 0 percent")
-        let cheese: (ingredient) = ("cheese", "yummy gooeyness", "less than 0 calories", "less than 0 percent")
+        let cheese: ingredient = ("cheese", "yummy gooeyness", "less than 0 calories", "less than 0 percent")
         ingredients.append(pepperoni)
         ingredients.append(cheese)
         print(ingredients[0].name)

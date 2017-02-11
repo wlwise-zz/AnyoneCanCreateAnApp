@@ -12,7 +12,7 @@ class MainViewController: UITableViewController {
     var lionData : [Lion] = []
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "showLionDetail"){
+        if segue.identifier == "showLionDetail" {
             let controller = segue.destination as! DetailViewController
             if let indexPath = tableView.indexPathForSelectedRow{
                 controller.lionDetail = lionData[indexPath.row]
@@ -25,7 +25,7 @@ class MainViewController: UITableViewController {
     }
     
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "lionCell", for: indexPath);
         cell.textLabel?.text = lionData[indexPath.row].lionName
         cell.detailTextLabel?.text = lionData[indexPath.row].lionDescription
@@ -40,7 +40,7 @@ class MainViewController: UITableViewController {
         print("add clicked")
         let currentIndex = lionData.count
         let newLion = Lion()
-        newLion.like = 0
+        newLion.like = false
         newLion.lionName = "hard coded name"
         newLion.lionDescription = "hard coded description"
         lionData.append(newLion)
@@ -60,13 +60,13 @@ class MainViewController: UITableViewController {
         let toothpasteLion = Lion()
         toothpasteLion.lionName = "Wendy's Toothpaste"
         toothpasteLion.lionDescription = "the one in the blue box"
-        toothpasteLion.like = 1
+        toothpasteLion.like = true
         lionData.append(toothpasteLion)
         
         let toothpasteLion2 = Lion()
         toothpasteLion2.lionName = "Wendy's Bad Toothpaste"
         toothpasteLion2.lionDescription = "the one in the red box"
-        toothpasteLion2.like = 0
+        toothpasteLion2.like = false
         lionData.append(toothpasteLion2)
         // Do any additional setup after loading the view, typically from a nib.
     }

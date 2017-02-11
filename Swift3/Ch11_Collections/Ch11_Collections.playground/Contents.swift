@@ -36,13 +36,18 @@ print(states.count)
 
 states["OR"] = "Oregon"
 
-print(states["OR"])
+//print(states["OR"])
 
-print(states["IN"])
+print(states["OR"] ?? "no state")
 
-states["OR"] = nil
+print(states["OR"]!)
 
-print(states["OR"])
+print(states["OR"] as Any)
+
+
+print(states["GA"] ?? "no state")
+
+print(states["IN"] ?? "no state")
 
 for (stateAbb, stateName) in states{
     print("\(stateAbb) : \(stateName)")

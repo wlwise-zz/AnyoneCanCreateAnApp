@@ -11,5 +11,5 @@ import Foundation
 class Lion {
     var lionName = ""
     var lionDescription = ""
-    var like = 1
+    var like = true
 }
