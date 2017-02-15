@@ -47,7 +47,7 @@ if g < h {
 var i = 5
 var j = 5
 
-if (i < j) {
+if i < j {
     print("\(i) is less than \(j)")
 } else if g > h {
     print ("\(i) is greater than \(j)")
