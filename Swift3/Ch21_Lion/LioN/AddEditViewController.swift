@@ -25,7 +25,7 @@ class AddEditViewController : UITableViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if (textField == nameTxt) {
+        if textField == nameTxt {
             nameTxt.resignFirstResponder()
             descTxt.becomeFirstResponder()
         } else {
