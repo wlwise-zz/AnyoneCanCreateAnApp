@@ -25,7 +25,7 @@ var d = 5
 var e = 10
 var f = 15
 
-if (d < e && e < f){
+if (d < e && e < f) {
     print("yes")
 }
 
