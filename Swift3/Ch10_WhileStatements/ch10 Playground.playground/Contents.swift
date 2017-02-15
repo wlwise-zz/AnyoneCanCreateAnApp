@@ -20,7 +20,7 @@ while x < y {
 var a = 11
 
 switch a {
-case 1,3,5,7,11,13:
+case 1, 3, 5, 7, 11, 13:
     print ("value must be a prime")
 case 2, 4, 6, 8, 9, 12:
     print ("value is not a prime")
