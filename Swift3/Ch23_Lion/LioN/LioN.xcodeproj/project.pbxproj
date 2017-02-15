@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E38141911D9718F400135867 /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38141901D9718F400135867 /* AddEditViewController.swift */; };
+		E3A6C1291E550D3400B2EE50 /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A6C1281E550D3400B2EE50 /* AddEditViewController.swift */; };
 		E3AD65B01D96C1AC00578495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65AF1D96C1AC00578495 /* AppDelegate.swift */; };
 		E3AD65B21D96C1AC00578495 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AD65B11D96C1AC00578495 /* MainViewController.swift */; };
 		E3AD65B51D96C1AC00578495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3AD65B31D96C1AC00578495 /* Main.storyboard */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E38141901D9718F400135867 /* AddEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddEditViewController.swift; path = ../AddEditViewController.swift; sourceTree = "<group>"; };
+		E3A6C1281E550D3400B2EE50 /* AddEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
 		E3AD65AC1D96C1AC00578495 /* LioN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LioN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3AD65AF1D96C1AC00578495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3AD65B11D96C1AC00578495 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		E3AD65AE1D96C1AC00578495 /* LioN */ = {
 			isa = PBXGroup;
 			children = (
-				E38141901D9718F400135867 /* AddEditViewController.swift */,
+				E3A6C1281E550D3400B2EE50 /* AddEditViewController.swift */,
 				E3AD65AF1D96C1AC00578495 /* AppDelegate.swift */,
 				E3AD65B11D96C1AC00578495 /* MainViewController.swift */,
 				E3CCA0801D96CC5E0028EA6E /* LioN.swift */,
@@ -143,7 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E38141911D9718F400135867 /* AddEditViewController.swift in Sources */,
+				E3A6C1291E550D3400B2EE50 /* AddEditViewController.swift in Sources */,
 				E3CCA0811D96CC5E0028EA6E /* LioN.swift in Sources */,
 				E3AD65B21D96C1AC00578495 /* MainViewController.swift in Sources */,
 				E3AD65B01D96C1AC00578495 /* AppDelegate.swift in Sources */,
